@@ -5,8 +5,21 @@ var debug = require('debug')('index');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    console.log(process.env.NODE_ENV);
   res.render('index', { title: 'Express' });
 });
+
+var user = require('./users');
+router.use('/users', user);
+
+var closure = require('./closure');
+router.use('/closure', closure);
+
+var readFiles = require('./readFiles');
+router.use('/readFiles', readFiles);
+
+var photos = require('./photos');
+router.use('/photos', photos);
 
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
