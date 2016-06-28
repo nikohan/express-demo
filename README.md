@@ -2,11 +2,13 @@
 
 I use this project to learn nodejs async programming and something about js language.
 
-### make this project:
-npm install
+### run this test project
 
-### start this app:
-npm start
-
-### use brower to view :
-http://localhost:3000
+  1. make this project:
+  npm install
+  
+  2. start this app:
+  npm start
+  
+  3. use brower to view :
+  http://localhost:3000
