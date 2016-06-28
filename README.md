@@ -1,6 +1,6 @@
 # express-demo
 
-learn nodejs async programming
+I use this project to learn nodejs async programming and something about js language.
 
 ### make this project:
 npm install
