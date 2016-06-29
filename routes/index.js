@@ -21,6 +21,9 @@ router.use('/readFiles', readFiles);
 var photos = require('./photos');
 router.use('/photos', photos);
 
+var photos = require('./schedule');
+router.use('/schedule', photos);
+
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
     next();
