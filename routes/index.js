@@ -21,11 +21,14 @@ router.use('/readFiles', readFiles);
 var photos = require('./photos');
 router.use('/photos', photos);
 
-var photos = require('./schedule');
-router.use('/schedule', photos);
+var schedule = require('./schedule');
+router.use('/schedule', schedule);
 
-var photos = require('./parserXml');
-router.use('/parserXml', photos);
+var parserXml = require('./parserXml');
+router.use('/parserXml', parserXml);
+
+var sorts = require('./sorts');
+router.use('/sorts', sorts);
 
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
