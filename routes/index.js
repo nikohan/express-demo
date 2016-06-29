@@ -24,6 +24,9 @@ router.use('/photos', photos);
 var photos = require('./schedule');
 router.use('/schedule', photos);
 
+var photos = require('./parserXml');
+router.use('/parserXml', photos);
+
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
     next();
