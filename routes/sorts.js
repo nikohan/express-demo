@@ -5,15 +5,33 @@ router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
 
+router.get('/array-sort', function(req, res, next) {
+    var nums = [2, 3, 4, 1, 5];
+    console.time('array-sort');
+    nums.sort(function(a, b) {
+        return a - b;
+    });
+    console.timeEnd('array-sort');
+    res.send(nums);
+});
+
 router.get('/merge-sort', function(req, res, next) {
     var nums = [2, 3, 4, 1, 5];
+    console.time('merge-sort');
+    //nums.sort(function(a, b) {
+    //    return a - b;
+    //});
     mergeSort(nums, 0, 4);
+    console.timeEnd('merge-sort');
     res.send(nums);
 });
 
 function mergeSort(nums, p, r) {
+    if(p == undefined) p = 0;
+    if(r == undefined) r = nums.length - 1;
+
     if(p < r) {
-        var q = (p + r) / 2;
+        var q = parseInt((p + r) / 2);
         mergeSort(nums, p, q);
         mergeSort(nums, q + 1, r);
         merge(nums, p, q, r);
