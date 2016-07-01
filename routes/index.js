@@ -1,12 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
+var app = require('../app');
 
 var debug = require('debug')('index');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
     console.log(process.env.NODE_ENV);
-  res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Express' });
 });
 
 var user = require('./users');
@@ -20,6 +22,9 @@ router.use('/readFiles', readFiles);
 
 var photos = require('./photos');
 router.use('/photos', photos);
+//router.get('/photos', photos.list);
+//router.get('/upload', photos.form);
+//router.post('/upload', photos.submit);
 
 var schedule = require('./schedule');
 router.use('/schedule', schedule);

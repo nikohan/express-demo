@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+</head>
+<body>
+    <h1><%= title%></h1>
+    <p>upload a photo to your account below.</p>
+    <form methot="post" enctype="multipart/form-data">
+        <p><input id="name" type="text" name="photo[name]" placeholder="Name" /></p>
+        <p><input id="file" type="file" name="photo[image]"/></p>
+        <p><input type="button" value="upload" onclick="uploadFile()"/></p>
+    </form>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        function uploadFile(){
+            var fd = new FormData();
+            fd.append("file",$('#file')[0].files[0]);
+            fd.append("name",$('#name').val());
+            $.ajax({
+                url: '/photos/upload',
+                type: 'POST',
+                data: fd,
+                async: true,
+                cache: false,
+                contentType: false,     // 告诉JSLite不要去处理发送的数据
+                processData: false,     // 告诉JSLite不要去设置Content-Type请求头
+                success: function(data){
+                    location.href = '/photos/list';
+                },
+                error: function(){
+
+                }
+            });
+
+        }
+    </script>
+</body>
+</html>
