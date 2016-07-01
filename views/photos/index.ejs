@@ -7,10 +7,12 @@
 <body>
     <h1>Photos</h1>
     <p>Express stock photo application</p>
+    <div><a href="/photos/upload">upload</a></div>
     <div id="photos">
         <% photos.forEach(function(photo) {%>
             <div class="photo">
                 <h2><%= photo.name%></h2>
+                <a href="/photos/<%= photo.id%>/download">download</a>
                 <img src="<%= photo.path%>"/>
             </div>
         <% });%>

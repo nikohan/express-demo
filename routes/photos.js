@@ -64,4 +64,22 @@ router.post('/upload', function(req, res, next) {
     });
 });
 
+router.get('/:id/download', function(req, res, next) {
+    var id = req.params.id;
+    Photo.findById(id, function(err, photo) {
+        if(err) {
+            return next(err);
+        }
+        res.download(photo.path, photo.name, function(err) {
+            if (err) {
+                console.log(err);
+                res.status(err.status).end();
+            }
+            else {
+                console.log('Sent:', photo.name);
+            }
+        });
+    });
+});
+
 module.exports = router;
