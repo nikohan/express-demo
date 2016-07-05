@@ -37,6 +37,9 @@ router.use('/sorts', sorts);
 var prototype = require('./prototype-demo');
 router.use('/prototype', prototype);
 
+var promise = require('./promise-demo');
+router.use('/promise', promise);
+
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
     next();
