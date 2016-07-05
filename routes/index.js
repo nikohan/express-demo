@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
-var app = require('../app');
 
 var debug = require('debug')('index');
 
@@ -20,11 +19,8 @@ router.use('/closure', closure);
 var readFiles = require('./readFiles');
 router.use('/readFiles', readFiles);
 
-var photos = require('./photos');
-router.use('/photos', photos);
-//router.get('/photos', photos.list);
-//router.get('/upload', photos.form);
-//router.post('/upload', photos.submit);
+//var photos = require('./photos');
+//router.use('/photos', photos);
 
 var schedule = require('./schedule');
 router.use('/schedule', schedule);
@@ -34,6 +30,12 @@ router.use('/parserXml', parserXml);
 
 var sorts = require('./sorts');
 router.use('/sorts', sorts);
+
+//var shoutbox = require('./shoutbox');
+//router.use('/shoutbox', shoutbox);
+
+var prototype = require('./prototype-demo');
+router.use('/prototype', prototype);
 
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
