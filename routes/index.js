@@ -40,6 +40,9 @@ router.use('/prototype', prototype);
 var promise = require('./promise-demo');
 router.use('/promise', promise);
 
+var rnd = require('./react-node-demo');
+router.use('/rnd', rnd);
+
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
     next();
