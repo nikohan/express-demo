@@ -13,22 +13,26 @@ router.get('/extends', function(req, res, next) {
     Animal.prototype = {
         shout: function() {
             console.log(this.words);
-        }
+        },
+        speak: function() {}
     };
 
     function Cat(words) {
         //Cat继承Animal
         Animal.call(this, words);
-        this.speak = function() {
-            console.log('speak:' + this.words);
-        };
+        //this.speak = function() {
+        //    console.log('speak:' + this.words);
+        //};
     }
-    //Cat.prototype = {
-    //    speak: function() {
-    //        console.log('speak:' + this.words);
-    //    }
-    //};
     util.inherits(Cat, Animal);
+
+    Cat.prototype = {
+        speak: function() {
+            Animal.speak.call(this);
+            console.log('speak:' + this.words);
+        }
+    };
+
 
     var cat = new Cat('miao~miao~');
     cat.shout();
