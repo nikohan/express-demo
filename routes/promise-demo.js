@@ -8,12 +8,18 @@ router.get('/', function(req, res, next) {
 router.get('/demo', function(req, res, next) {
     function timeout(ms) {
         return new Promise((resolve, reject) => {
-            setTimeout(resolve, ms, 'done');
+            if(ms > 5000) {
+                reject("it has a err");
+            } else {
+                setTimeout(resolve, ms, 'done');
+            }
         });
     }
 
-    timeout(100).then((value) => {
+    timeout(10000).then((value) => {
         console.log(value);
+    }, (err) => {
+        console.log(err);
     });
 
     res.send('respond with a resource');
