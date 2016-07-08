@@ -8,13 +8,26 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/service-demo', function(req, res, next) {
-    var id = 9999;
+    var id = 999;
     promiseService.get(id)
         .then((result) => {
             res.json({result:result});
         })
         .catch((err) => {
             res.json({err:err});
+            console.log(err.stack);
+        });
+});
+
+router.get('/catch-demo', function(req, res, next) {
+    var id = 0;
+    promiseService.set(id)
+        .then((result) => {
+            res.json({result:result});
+        })
+        .catch((err) => {
+            res.json({err:err});
+            console.log('2:' + err.stack);
         });
 });
 

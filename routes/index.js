@@ -19,6 +19,7 @@ router.use('/closure', closure);
 var readFiles = require('./readFiles');
 router.use('/readFiles', readFiles);
 
+//需要启动mongodb
 //var photos = require('./photos');
 //router.use('/photos', photos);
 
