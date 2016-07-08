@@ -44,6 +44,9 @@ router.use('/promise', promise);
 var rnd = require('./react-node-demo');
 router.use('/rnd', rnd);
 
+var log = require('./log-demo');
+router.use('/log', log);
+
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
     next();

@@ -14,18 +14,19 @@
     "formidable": "^1.0.17",
     "htmlparser": "^1.7.7",
     "jade": "~1.11.0",
+    "log4js": "^0.6.37",
     "mocha": "^2.5.3",
     "mongoose": "^4.5.3",
     "morgan": "~1.6.1",
     "node-schedule": "^1.1.1",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
     "redis": "^2.6.2",
     "serve-favicon": "~2.3.0",
     "supervisor": "^0.11.0",
     "thrift": "^0.9.3",
     "util": "^0.10.3",
-    "xml2js": "^0.4.16",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "xml2js": "^0.4.16"
   },
   "devDependencies": {
     "babel-core": "^6.4.0",

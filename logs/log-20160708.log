@@ -1,0 +1,16 @@
+[2016-07-08 13:34:37.031] [INFO] logInfo - 
+[2016-07-08 13:34:37.033] [DEBUG] logInfo - debug
+[2016-07-08 13:34:37.033] [ERROR] logInfo - error
+[2016-07-08 13:35:28.131] [INFO] logInfo - 
+[2016-07-08 13:35:28.132] [DEBUG] logInfo - debug
+[2016-07-08 13:35:28.132] [ERROR] logInfo - error
+[2016-07-08 13:37:11.747] [INFO] logInfo - 
+[2016-07-08 13:37:11.748] [DEBUG] logInfo - debug
+[2016-07-08 13:37:11.748] [ERROR] logInfo - error
+[2016-07-08 13:37:45.571] [INFO] logInfo - 
+[2016-07-08 13:37:45.572] [DEBUG] logInfo - debug
+[2016-07-08 13:37:45.573] [ERROR] logInfo - error
+[2016-07-08 13:41:58.621] [ERROR] logInfo - ::1 - - "GET /log/demosdasd HTTP/1.1" 404 921 "" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36"
+[2016-07-08 13:44:49.942] [INFO] logInfo - 
+[2016-07-08 13:44:49.943] [DEBUG] logInfo - debug
+[2016-07-08 13:44:49.944] [ERROR] logInfo - error
