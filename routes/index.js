@@ -47,6 +47,9 @@ router.use('/rnd', rnd);
 var log = require('./log-demo');
 router.use('/log', log);
 
+var json = require('./json-demo');
+router.use('/json', json);
+
 router.route('/login').get(function(req, res, next) {
     //res.render('index', { title: 'index' });
     next();

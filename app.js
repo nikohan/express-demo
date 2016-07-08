@@ -8,8 +8,6 @@ var log4js = require('log4js');
 
 var logger = log4js.getLogger('logInfo');
 var routes = require('./routes/index');
-
-var logger = log4js.getLogger("http");
 var app = express();
 
 // view engine setup
@@ -18,6 +16,8 @@ app.set('view engine', 'ejs');
 
 app.set('images', path.join(__dirname, 'public/images'));
 app.set('photos', path.join(__dirname, 'public/photos'));
+
+app.set('json spaces', 4);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
