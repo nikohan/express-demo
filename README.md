@@ -1,7 +1,8 @@
 # express-demo
 
-I use this project to learn **nodejs** async programming and something about **js** language.
+It use this project to learn **nodejs** async programming and something about **js** language.
 The version of this project's javascript language is ECMAScript2015.
+It use the express which is a web framework of nodejs.You can learn from https://github.com/expressjs/express.
 
 ### run this test project
 
