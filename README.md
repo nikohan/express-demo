@@ -6,27 +6,27 @@ It use the express which is a web framework of nodejs.You can learn express from
 
 ### run this test project
 
-  1. install webpack global
+1. install webpack global
   ```bash
   npm install webpack -g
   ```
 
-  2. make this project:
+2. make this project:
   ```bash
   npm install
   ```
   
-  3. start this app:
+3. start this app:
   ```bash
   npm start
   ```
   
-  4. start compile of webpack
+4. start compile of webpack
   ```bash
   webpack --progress --colors --watch
   ```
   
-  4. use brower to view :
+5. use brower to view :
   http://localhost:3000
 
 ### routes's function
