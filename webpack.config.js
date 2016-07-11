@@ -4,7 +4,7 @@
 var path=require("path");
 
 module.exports={
-    entry:  "./src/react/react-node-demo/index.jsx",
+    entry:  "./public/src/react/react-node-demo/index.jsx",
     output: {
         path: path.join(__dirname,"./public/out"), //打包输出的路径
         filename: "bundle.js",                  //打包后的名字
