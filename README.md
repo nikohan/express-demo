@@ -6,7 +6,7 @@ It use the express which is a web framework of nodejs.You can learn express from
 
 ### run this test project
 
-1. install webpack global
+1. If you want to run react+nodejs demo. You should install webpack global first.
   ```bash
   npm install webpack -g
   ```
@@ -21,7 +21,7 @@ It use the express which is a web framework of nodejs.You can learn express from
   npm start
   ```
   
-4. start compile of webpack
+4. start compile of webpack when you want to run react+nodejs demo
   ```bash
   webpack --progress --colors --watch
   ```
