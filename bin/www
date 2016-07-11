@@ -7,28 +7,56 @@
 var app = require('../app');
 var debug = require('debug')('myapp-express:server');
 var http = require('http');
+var cluster = require('cluster');
+var numCPUs = require('os').cpus().length;
 
 /**
- * Get port from environment and store in Express.
+ * cluster demo
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+if (cluster.isMaster) {
 
-/**
- * Create HTTP server.
- */
+    // Fork workers.
+    for (var i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
 
-var server = http.createServer(app);
+    cluster.on('listening',function(worker, address){
+        console.log('核心'+ worker.id +' pid:'+ worker.process.pid);
+    });
 
-/**
- * Listen on provided port, on all network interfaces.
- */
+    cluster.on('exit', (worker, code, signal) => {
+        console.log(`worker ${worker.process.pid} died`);
+        setTimeout(function() {cluster.fork();},2000);
+    });
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+} else {
 
+    // Workers can share any TCP connection
+    // In this case it is an HTTP server
+
+    /**
+    * Get port from environment and store in Express.
+    */
+
+    var port = normalizePort(process.env.PORT || '3000');
+    app.set('port', port);
+
+    /**
+    * Create HTTP server.
+    */
+
+    var server = http.createServer(app);
+
+    /**
+    * Listen on provided port, on all network interfaces.
+    */
+
+    server.listen(port);
+    server.on('error', onError);
+    server.on('listening', onListening);
+
+}
 /**
  * Normalize a port into a number, string, or false.
  */

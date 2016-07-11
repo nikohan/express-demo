@@ -22,7 +22,7 @@ app.set('json spaces', 4);
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 //app.use(logger('dev'));
-app.use(log4js.connectLogger(logger, { level: 'auto' }));
+//app.use(log4js.connectLogger(logger, { level: 'auto' }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -30,7 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
-console.log(process.cwd());//程序当前的启动路径
+//程序当前的启动路径
+//console.log(process.cwd());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
