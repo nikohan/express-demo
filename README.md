@@ -34,4 +34,4 @@ You can use the file [index.js](https://github.com/zhzhaohanzh/express-demo/blob
   var user = require('./users');
   router.use('/users', user);
   ```
-    In this example, you can use localhost:3000/users to view its results in the brower.And you can see the file [users.js](https://github.com/zhzhaohanzh/express-demo/blob/master/routes/users.js) which should be used to writing businesses that you need.
+In this example, you can use localhost:3000/users to view its results in the brower.And you can see the file [users.js](https://github.com/zhzhaohanzh/express-demo/blob/master/routes/users.js) which should be used to writing businesses that you need.
