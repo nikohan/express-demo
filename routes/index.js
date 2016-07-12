@@ -32,9 +32,6 @@ router.use('/parserXml', parserXml);
 var sorts = require('./sorts');
 router.use('/sorts', sorts);
 
-//var shoutbox = require('./shoutbox');
-//router.use('/shoutbox', shoutbox);
-
 var prototype = require('./prototype-demo');
 router.use('/prototype', prototype);
 
