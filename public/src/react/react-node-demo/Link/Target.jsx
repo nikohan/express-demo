@@ -1,9 +1,9 @@
 "use strict";
 import React, { Component, PropTypes } from "react";
 import ReactDOM from "react-dom";
-import "../../../stylesheets/style.css";
+import "../../../../stylesheets/style.css";
 
-class App extends React.Component {
+export default class LinkDemo extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -11,11 +11,8 @@ class App extends React.Component {
     render() {
         return(
             <div>
-                hello world!
+                <h1>Target</h1>
             </div>
         );
     }
 }
-
-
-module.exports = App;
