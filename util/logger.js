@@ -1,11 +1,12 @@
 var log4js = require('log4js');
+var path=require("path");
 
 log4js.configure({
     "appenders": [
         {"type": "console", "category": "console"},
         {
             "type": "dateFile",
-            "filename": __dirname +"../../logs/log-",
+            "filename": path.join(__dirname,"../logs/log-"),
             "pattern": "yyyyMMdd.log",
             "absolute": true,
             "alwaysIncludePattern": true,

@@ -1,6 +1,3 @@
-/**
- * Created by Zi0000350 on 2016/7/7.
- */
 var path=require("path");
 
 module.exports={

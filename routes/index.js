@@ -39,7 +39,7 @@ var promise = require('./promise-demo');
 router.use('/promise', promise);
 
 var rnd = require('./react-node-demo');
-router.use('/rnd', rnd);
+router.use('/react', rnd);
 
 var log = require('./log-demo');
 router.use('/log', log);
